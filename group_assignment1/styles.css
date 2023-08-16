@@ -1,0 +1,185 @@
+
+
+/*# sourceMappingURL=styles.css.map */
+body {
+    background-image: linear-gradient(to bottom right, #b42d7cfb, #ad903e);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: red;
+    
+}
+
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.fishName {
+    font-size: 20px;
+    color: grey;
+    margin: 0;
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.navbar a {
+    color: grey;
+    text-decoration: none;
+    padding: 10px 22px;
+    margin-left: 24px;
+}
+
+.navbar a:first-child {
+    margin-left: 0;
+}
+
+.navbar a:hover {
+    background-color: grey;
+}
+
+
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    background-image: linear-gradient(to bottom right, white, #f2f2f2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.container header {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container li{
+    font-size: 28px;
+}
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #8a7547, #b1e0c5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ffa600, #282e81);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    background: red;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container p {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-transition{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.about-transition.show{
+    opacity: 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.fishimg {
+    border-radius: 50%;
+    margin-right: 20%;
+    float: right;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration:dashed;
+}
+
+.contactForm label {
+    font-weight: bold;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="date"],
+.contactForm input[type="tel"],
+.contactForm textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.anime{
+    animation: slideIn 10s forwards;
+     opacity: 0;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.contactForm button {
+    background-color: #a2c3e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.contactForm button:hover {
+    background-color: grey;
+}

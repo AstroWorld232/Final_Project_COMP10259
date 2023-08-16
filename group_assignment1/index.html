@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SailFish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="fishName">SailFish</h1>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#preyPredators">Prey & Predators</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#Count">World Count</a>
+        <a href="#declaration">Honesty Declaration</a>
+        <a href="#contactUs">Contact Us</a>
+    </nav>
+
+    <div id="home" class="container">
+        <img class="fishimg" src="fish.jpg" alt="SailFish">
+        <h2 id="fish">SailFish</h2>
+        <ul>
+            <li>Sailfish have a streamlined and elongated body with a long, sharp bill</li>
+            <li>They swim very fast reaching up to 110 kilometers per hour</li>
+            <li>Sailfish can reach a length of 6 to 11 feet</li>
+        </ul>
+    </div>
+
+    <div id="about" class="container">
+        <header>
+            <h1>About</h1>
+        </header>
+        <p class="about-transition">
+            The nature of the fish reflects its adaptation to life in the open waters of tropical and temperate oceans
+        </p>
+        <p>
+            They are mostly renowned for their speed and are also considered the fastest swimmers in the oceans
+        </p>
+    </div>
+
+    <div id="preyPredators" class="container">
+        <header>
+            <h1>Prey & Predators</h1>
+        </header>
+        <div>
+            <h2>Prey</h2>
+            <p>
+                SailFish primarily feed on small fishes like sardines, mackerel, and herring. They have incredible speed making them effective against these fish.
+            </p>
+        </div>
+        <div>
+            <h2>Predators</h2>
+            <p>
+                The main apex predators for the Sailfish are large sharks. Although they are swift, they may occasionally fall prey to large sharks.
+            </p>
+        </div>
+    </div>
+
+    <div id="gallery" class="container">
+        <header>
+            <h1>Gallery</h1>
+        </header>
+        <div class = "slideshow">
+            <img src="img/fish.jpg" alt="">
+            <img src="img/fishimg.jpg" alt="">
+            <img src="img/images.jpg" alt="">
+            <img src="img/sail.jpg" alt="">
+            <img src="img/Sailfish.jpg" alt="">
+           <button class = "close-slideshow">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slideshow').cycle();
+        });
+        </script>
+
+    <div id="Count" class="container">
+        <header>
+            <h1>World Count</h1>
+        </header>
+        <p>
+            The latest population report states it is challenging to record their population as they are highly migratory. So their population is frequent and prevails throughout many oceans and seas.
+        </p>
+    </div>
+
+    <div id="declaration" class="container">
+        <header>
+            <h1>Honesty Declaration</h1>
+        </header>
+        <p>
+            I declare that my assignment is wholly my own work in accordance with TriOs/Mohawk Academic Integrity Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the COMP10259 instructor and / or made available in this assignment for my use.
+            I also declare that no part of this assignment has been distributed to other students other than my team member.
+        </p>
+        <h3>Credits</h3>
+        <p>
+            Name: Swarnim Thapaliya, Anurag Rayamajhi<br>
+            Dated: [07/31/2023]<br>
+            Resources: [Google, Youtube]
+        </p>
+    </div>
+
+    <div id="contactUs" class="container">
+        <header>
+            <h1 class="anime">Contact Us</h1>
+            <email >Swarnim.Thapaliya@triosstudent.coms</email>
+        </header>
+        <div class="contactForm">
+            <form action="https://formspree.io/f/mpzgpwgy" method="POST" id="contactForm" action="#" method="post">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" pattern=".{5,}" title="First name must be at least 5 characters" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" pattern=".{5,}" title="Last name must be at least 5 characters" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter a valid email address" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" min="1900-01-01" max="2099-12-31" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" minlength="50" title="Message must be at least 50 characters" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const message = document.querySelector('#message');
+            if (message.value.length < 50) {
+                alert('Message must be at least 50 characters');
+                event.preventDefault();
+            }
+        });
+        const aboutContent = document.querySelector('.about-content');
+        aboutContent.classList.add('show');
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('.navbar').addClass('fixed-navbar');
+        } else {
+            $('.navbar').removeClass('fixed-navbar');
+        }
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.slideshow').click(function(e) {
+            if ($(e.target).hasClass('slideshow')) {
+                $('.slideshow').hide();
+            }
+        });
+        
+        $('.close-slideshow').click(function() {
+            $('.slideshow').hide();
+        });
+    });
+    </script>
+    
+
+    <footer>
+        <p>Copyright © 2023 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

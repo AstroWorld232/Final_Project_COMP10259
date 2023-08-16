@@ -1,0 +1,24 @@
+@import 'styles.css';
+
+.navbar {
+    a {
+        color: yellow;
+        &:hover {
+            background-color: yellow; 
+            color: white;
+        }
+    }
+}
+
+button {
+    background-color: red;
+}
+
+.contactForm {
+    border: 2px dashed red;
+}
+
+button::after {
+    content: '';
+    text-transform: uppercase;
+}
